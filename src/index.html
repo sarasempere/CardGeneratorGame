@@ -13,16 +13,79 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col">
+          <div class="container conticonti">
+            <div class="card myCard text-center">
+              <div class="card-body">
+                <div class="d-flex justify-content-start">
+                  <h5 class="logo1 bastos"></h5>
+                </div>
+
+                <h3 class="numb"></h3>
+
+                <div class="d-flex justify-content-end">
+                  <h5 class="logo2 bastos"></h5>
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary play"
+              id="excuse1"
+              onclick="reload();"
+            >
+              Player 1 CLICK!
+            </button>
+          </div>
+        </div>
+        <div class="col-md-auto">
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Player 1
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item points1">Total games</li>
+              <li class="list-group-item wins1">Win</li>
+            </ul>
+          </div>
+          <br />
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              Player 2
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item points2">Total games: 0</li>
+              <li class="list-group-item wins2">Win: 0</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col">
+          <div class="container conticonti">
+            <div class="card myCard text-center">
+              <div class="card-body">
+                <div class="d-flex justify-content-start">
+                  <h5 class="logo1 bastos2"></h5>
+                </div>
+
+                <h3 class="numb2"></h3>
+
+                <div class="d-flex justify-content-end">
+                  <h5 class="logo2 bastos2"></h5>
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="btn btn-primary play"
+              id="excuse2"
+              onclick="reload2();"
+            >
+              Player 2 CLICK!
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </body>
