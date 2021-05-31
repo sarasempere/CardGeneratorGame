@@ -69,3 +69,8 @@ body {
 .play {
   margin: 0.5rem;
 }
+
+.nav-img {
+  width: 3rem;
+  height: 3rem;
+}
