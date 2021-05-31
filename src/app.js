@@ -35,7 +35,8 @@ function winner() {
 }
 
 let player1 = 0;
-window.reload = function reload() {
+let btn = document.querySelector("#reload1");
+btn.addEventListener("click", function() {
   if (player1 <= player2) {
     player1++;
     number();
@@ -46,10 +47,12 @@ window.reload = function reload() {
   } else {
     alert("Player 2 turn");
   }
-};
+});
 
 let player2 = 0;
-window.reload2 = function reload2() {
+
+let btn2 = document.querySelector("#reload2");
+btn2.addEventListener("click", function() {
   if (player2 <= player1) {
     player2++;
     numberSecondCard();
@@ -60,7 +63,7 @@ window.reload2 = function reload2() {
   } else {
     alert("Player 1 turn");
   }
-};
+});
 
 let randomSuit = () => {
   return Math.floor(Math.random() * 4);
