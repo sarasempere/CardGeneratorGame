@@ -36,22 +36,30 @@ function winner() {
 
 let player1 = 0;
 window.reload = function reload() {
-  player1++;
-  number();
-  bastos();
-  winner();
-  let player1points = document.querySelector(".points1");
-  player1points.innerHTML = "Total games: " + player1;
+  if (player1 <= player2) {
+    player1++;
+    number();
+    bastos();
+    winner();
+    let player1points = document.querySelector(".points1");
+    player1points.innerHTML = "Total games: " + player1;
+  } else {
+    alert("Player 2 turn");
+  }
 };
 
 let player2 = 0;
 window.reload2 = function reload2() {
-  player2++;
-  numberSecondCard();
-  bastosSecondCard();
-  winner();
-  let player2points = document.querySelector(".points2");
-  player2points.innerHTML = "Total games: " + player2;
+  if (player2 <= player1) {
+    player2++;
+    numberSecondCard();
+    bastosSecondCard();
+    winner();
+    let player2points = document.querySelector(".points2");
+    player2points.innerHTML = "Total games: " + player2;
+  } else {
+    alert("Player 1 turn");
+  }
 };
 
 let randomSuit = () => {
