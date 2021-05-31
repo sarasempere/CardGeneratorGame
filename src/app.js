@@ -81,11 +81,7 @@ let bastos = () => {
   let bas = document.querySelectorAll(".bastos");
   function drawBastos(bas) {
     for (let i = 0; i < bas.length; i++) {
-      //activeDiv.classList.replace('active', 'warning');Usar para emezar desde 0.
-      //bas[i].classList.add(basto);
       let arrLength = bas[i].classList.length;
-      console.log(arrLength);
-      console.log(bas[i].classList[arrLength - 1]);
       if (
         bas[i].classList[arrLength - 1] == "spade" ||
         bas[i].classList[arrLength - 1] == "heart" ||
@@ -97,9 +93,7 @@ let bastos = () => {
       } else {
         bas[i].classList.add(basto);
       }
-      console.log(bas[i].classList.length, "baasi");
     }
-    console.log(bas);
   }
   drawBastos(bas);
 };
@@ -135,12 +129,21 @@ let bastosSecondCard = () => {
   let bas = document.querySelectorAll(".bastos2");
   function drawBastos(bas) {
     for (let i = 0; i < bas.length; i++) {
-      //activeDiv.classList.replace('active', 'warning');Usar para emezar desde 0.
-      bas[i].classList.add(basto);
+      let arrLength = bas[i].classList.length;
+      if (
+        bas[i].classList[arrLength - 1] == "spade" ||
+        bas[i].classList[arrLength - 1] == "heart" ||
+        bas[i].classList[arrLength - 1] == "diamond" ||
+        bas[i].classList[arrLength - 1] == "club"
+      ) {
+        bas[i].classList.remove(bas[i].classList[arrLength - 1]);
+        bas[i].classList.add(basto);
+      } else {
+        bas[i].classList.add(basto);
+      }
     }
   }
   drawBastos(bas);
-  //return console.log(basto);
 };
 
 function numberSecondCard() {
